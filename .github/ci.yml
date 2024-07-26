@@ -12,7 +12,9 @@ jobs:
 
     steps:
     - name: Setup BATS
-        uses: mig4/setup-bats@v1.2.0
+        uses: mig4/setup-bats@v1
+        with:
+          bats-version: 1.2.1
       
     - name: Build and Test Docker Image
         uses: actions/checkout@v4
