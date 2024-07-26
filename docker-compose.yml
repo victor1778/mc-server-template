@@ -17,7 +17,7 @@ services:
       TYPE: FABRIC
       FABRIC_LOADER_VERSION: 0.15.9
       WORLD: /worlds/v1.0
-      MOTD: " A §nPerroZompopo§r server. Powered by §3Docker§r and §6AWS§r"
+      MOTD: "A §nPerroZompopo§r server. Powered by §3Docker§r and §6AWS§r"
 
       ALLOW_FLIGHT: true
       DIFFICULTY: normal
@@ -40,5 +40,9 @@ services:
       
       OPS: |
         Viktor1778
-
+    healthcheck:
+      test: mc-health
+      start_period: 30s
+      interval: 5s
+      retries: 20
     restart: unless-stopped
