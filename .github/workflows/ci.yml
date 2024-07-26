@@ -12,8 +12,8 @@ jobs:
 
     steps:
     - name: Setup BATS
-        uses: mig4/setup-bats@v1.2.0
+      uses: mig4/setup-bats@v1.2.0
       
     - name: Build and Test Docker Image
-        uses: actions/checkout@v4
-        run: bats -T .test/validation_tests.bats
+      uses: actions/checkout@v4
+      run: bats -T .test/validation_tests.bats
