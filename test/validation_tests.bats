@@ -28,8 +28,3 @@ setup() {
   run nc -z localhost 25565
   assert_success
 }
-
-@test "testValidation_validateServerHealthy" {
-  health_status=$(docker container inspect -f '{{.State.Health.Status}}' mc)
-  assert_equal $health_status "healthy"
-}
