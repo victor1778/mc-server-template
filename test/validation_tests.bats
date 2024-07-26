@@ -1,7 +1,9 @@
 #!/usr/bin/env bats
 
 setup() {
-  load 'test_helper/bats-assert/load'
+  load 'tests_helper'
+    _tests_helper
+
   TEST_DIR="$(cd "$(dirname "$BATS_TEST_FILENAME")" >/dev/null 2>&1 && pwd)"
   PROJECT_ROOT="$(cd "$TEST_DIR/.." >/dev/null 2>&1 && pwd)"
   cd "$PROJECT_ROOT" || exit 1
