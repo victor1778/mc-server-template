@@ -1,0 +1,44 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    container_name: mc
+    stdin_open: true
+    tty: true
+    ports:
+      - 25565:25565
+    volumes:
+      - ./data:/data
+      - ./mods:/mods
+      - ./worlds:/worlds:ro
+    environment:
+      EULA: "TRUE"
+      MAX_MEMORY: 4G
+      VERSION: 1.20.1
+      TYPE: FABRIC
+      FABRIC_LOADER_VERSION: 0.15.9
+      WORLD: /worlds/v1.0
+      MOTD: " A §nPerroZompopo§r server. Powered by §3Docker§r and §6AWS§r"
+
+      ALLOW_FLIGHT: true
+      DIFFICULTY: normal
+      LEVEL_TYPE: minecraft:large_biomes
+
+      MAX_PLAYERS: 12
+      WHITELIST: |
+        Momolfo
+        JoshDroid
+        Viktor1778
+        WitchHunter1803
+        cm94178212
+        shadow_eve2703
+        P13DRA
+        AmElYaris
+        Corbexu
+        sampiVEVO
+        Keion08
+        SrSkibidiToilet
+      
+      OPS: |
+        Viktor1778
+
+    restart: unless-stopped
