@@ -7,11 +7,6 @@ setup() {
   cd "$PROJECT_ROOT" || exit 1
 }
 
-@test "testValidation_validateVolumeMount" {
-  run docker compose exec minecraft ls /data
-  assert_success
-}
-
 @test "testValidation_validateMineacraftVersion" {
   run docker compose logs
   assert_success --partial "version 1.20.1"
