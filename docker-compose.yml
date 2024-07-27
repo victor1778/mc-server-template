@@ -23,7 +23,7 @@ services:
       DIFFICULTY: normal
       LEVEL_TYPE: minecraft:large_biomes
 
-      MAX_PLAYERS: 12
+      MAX_PLAYERS: 20
       WHITELIST: |
         Momolfo
         JoshDroid
@@ -38,6 +38,7 @@ services:
         Keion08
         SrSkibidiToilet
         BRL_Rick
+      EXISTING_WHITELIST_FILE: MERGE
       
       OPS: |
         Viktor1778
