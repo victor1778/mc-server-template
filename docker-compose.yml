@@ -38,6 +38,7 @@ services:
         Keion08
         SrSkibidiToilet
         BRL_Rick
+        TITOFON5
       EXISTING_WHITELIST_FILE: MERGE
       
       OPS: |
